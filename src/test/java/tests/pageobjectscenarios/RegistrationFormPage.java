@@ -31,8 +31,6 @@ public class RegistrationFormPage {
         open("https://demoqa.com/automation-practice-form");
         return this;
     }
-
-
     public RegistrationFormPage fillForm () {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
@@ -49,15 +47,12 @@ public class RegistrationFormPage {
         $("#submit").click();
         return this;
     }
-
     public void setDate (String birthYear, String birthMonth, String birthDay){
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(birthMonth);
         $(".react-datepicker__year-select").selectOption(birthYear);
         $(String.format("[aria-label='Choose Tuesday, %s %sth, %s']", birthMonth, birthDay, birthYear)).click();
-
     }
-
     public void checkData () {
         $(".table-responsive").shouldHave(text(firstName + " " + lastName),
                 text(userEmail),

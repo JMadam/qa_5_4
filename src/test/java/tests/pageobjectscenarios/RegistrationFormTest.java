@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class RegistrationFormTest {
 
-    RegistrationFormPage RegistrationFormPage = new RegistrationFormPage();
+    RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     @BeforeAll
     static void setup() {
@@ -14,7 +14,7 @@ public class RegistrationFormTest {
     }
     @Test
     void successfulFillTest() {
-        RegistrationFormPage
+        registrationFormPage
                 .openPage()
                 .fillForm()
                 .checkData();
